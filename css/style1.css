@@ -7,7 +7,7 @@ body, html{
     word-spacing: 0.2em;
     letter-spacing: 0.12em;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
 }
 
 .container{
@@ -18,7 +18,7 @@ body, html{
 
 .container>div{
     margin: 100px 0;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 .no-margin__padding{
