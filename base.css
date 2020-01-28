@@ -1,0 +1,11 @@
+:root{
+    --font1: 'Oswald', sans-serif;
+    --font2: 'Shadows Into Light', cursive;
+    --color1: white;
+    --color2: black;
+    --background-color1: black;
+    --background-color2: white;
+    --border-width1: 10px;
+    --border-width2: 8px;
+    --flex-basis1: 100%;
+}
