@@ -213,8 +213,7 @@ input[type=text], input[type=email], .button, .textarea{
 }
 
 
-
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .flex{
         flex-direction: column;
         align-content: center;
