@@ -1,4 +1,5 @@
-window.onload = function () {
-    var elmnt = document.getElementById("main-section");
-    elmnt.scrollIntoView(true); // Top
-};
+function Scrolldown() {
+    window.scroll(0,300); 
+}
+
+window.onload = Scrolldown;

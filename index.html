@@ -14,7 +14,7 @@
     <script src="js/main.js"></script>
     <title>Akshay's Portfolio</title>
 </head>
-<body>
+<body onload="window.location='#main-section';">
     <div class="sandwichbar">
 		<input type="checkbox" class="toggler" id="toggle1">
 		<div class="sandwich">
@@ -137,11 +137,11 @@
             </div>
             <div>
                 <div class="abs pull--right pull--top flex">
-                    <div class="bordered-box-left-bottom"><img src="img/profile-image.jpg" alt="my-profile-img" class="responsive limit-box-150"></div>
+                    <div class="bordered-box-left-bottom"><img src="img/profile-image.jpg" alt="my-profile-img" class="responsive limit-box-150" id="hide-on-mobile-1"></div>
                     <h2 class="rotate-text text-center inline-block"><p>About me <br>&lt;</p></h2>
                 </div>
                 <div class="abs pull--right pull--bottom flex">
-                    <div class="speech-bubble">
+                    <div class="speech-bubble" id="hide-on-mobile-1">
                         <div class="quotes-container">
                             <p>Think Different.<p>
                             <h3>Wait, That's&nbsp;<i class="fab fa-apple"></i>.</h3>

@@ -220,4 +220,7 @@ input[type=text], input[type=email], .button, .textarea{
         align-content: center;
         align-items: center;
     }
+    #hide-on-mobile-1{
+        display: none;
+    }
 }
