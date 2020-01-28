@@ -1,0 +1,126 @@
+#backgroundCode {
+    font-family: Consolas;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 27px;
+    word-spacing: initial;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color1);
+    color: var(--color1);
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,  0%);
+    filter: blur(3.5px);
+    z-index: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tags {
+    color: #E736D6;
+}
+
+.elements {
+    color: #7FF67C;
+}
+
+.ids {
+    color: #FFF281;
+}
+
+.outer {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.outer .typewriter-text {
+    width: 0%;
+    display: flex;
+    overflow: hidden;
+}
+
+.outer:nth-child(1n+0) .typewriter-text {
+    animation: typing 1700ms steps(20, end), blink 500ms step-end 4;
+    animation-fill-mode: forwards;
+}
+
+.outer:nth-child(1) .typewriter-text {
+    animation-delay: 500ms;
+}
+
+.outer:nth-child(2) .typewriter-text {
+    animation-delay: 2300ms;
+}
+
+.outer:nth-child(3) .typewriter-text {
+    animation-delay: 4000ms;
+}
+
+.outer:nth-child(4) .typewriter-text {
+    animation-delay: 6000ms;
+}
+
+.outer:nth-child(5) .typewriter-text {
+    animation-delay: 8000ms;
+}
+
+.outer:nth-child(6) .typewriter-text {
+    animation-delay: 10000ms;
+}
+
+.outer:nth-child(7) .typewriter-text {
+    animation-delay: 12000ms;
+}
+
+.outer:nth-child(8) .typewriter-text {
+    animation-delay: 14000ms;
+}
+
+.outer:nth-child(9) .typewriter-text {
+    animation-delay: 16000ms;
+}
+
+.outer:nth-child(10) .typewriter-text {
+    animation-delay: 18000ms;
+}
+
+.outer:nth-child(11) .typewriter-text {
+    animation-delay: 20000ms;
+}
+
+.outer:nth-child(12) .typewriter-text {
+    animation-delay: 22000ms;
+}
+
+.outer:nth-child(13) .typewriter-text {
+    animation: typing 1700ms 24000ms steps(20, end), blink 500ms 24000ms step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-right: 4px solid transparent;
+    }
+
+    50% {
+        border-right: 4px solid var(--color1);
+    }
+}
