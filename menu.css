@@ -1,0 +1,191 @@
+:root{
+    --primary-color: rgb(255, 255, 255);
+    --overlay-color:rgba(255,255,255, 0.90);
+    --menu-speed: 700ms;
+}
+
+
+.sandwichbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+.sandwichbar .toggler{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    cursor: pointer;
+    width: 60px;
+    height: 90px;
+    opacity: 0;
+    margin: 0;
+}
+
+.sandwichbar .sandwich{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 90px;
+    /* padding: 1rem; */
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border-radius: 0px 10px 200px 10px;
+    transition: all 400ms ease;
+    /* border: 1px solid #000; */
+}
+
+/* sandwich lines */
+.sandwichbar .sandwich > div {
+    position: relative;
+    left: 10%;
+    width: 70%;
+    height: 5px;
+    background-color: #000;
+    transition: all 400ms ease;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center; */
+}
+
+.sandwichbar .sandwich > div:before,
+.sandwichbar .sandwich > div:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: inherit;
+    background: inherit;
+}
+
+.sandwichbar .sandwich > div:after{
+    top: 10px;
+}
+
+/* animating menu */
+
+.sandwichbar .toggler:checked + .sandwich > div {
+    transform: rotate(40deg);
+    background-color: white;
+}
+
+.sandwichbar .toggler:checked + .sandwich > div:before,
+.sandwichbar .toggler:checked + .sandwich > div:after {
+    top: 0;
+    transform: rotate(100deg);
+    background-color: white;
+}
+
+.sandwichbar .toggler:checked + .sandwich {
+    background-color: black;
+}
+/* .sandwichbar .toggler:checked:hover + .sandwich > div {
+    transform: rotate(225deg);
+} */
+
+
+/* menu show on click */
+.sandwichbar .toggler:checked ~.navigationmenu {
+    visibility: visible;
+}
+
+.sandwichbar .toggler:checked ~.navigationmenu > div {
+    transform: translateX(-30%);
+    transition-duration: var(--menu-speed);
+}
+
+.sandwichbar .toggler:checked ~.navigationmenu > div > div {
+    /* transition: opacity 2000ms ease; */
+    opacity: 1;
+}
+
+.sandwichbar .navigationmenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sandwichbar .navigationmenu > div{
+    transform: translate(-120%);
+    background: var(--overlay-color);
+    width: 70vw;
+    height: 160vw;
+    border-radius: 70%;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.sandwichbar .navigationmenu > div > div {
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+}
+
+.sandwichbar ,.navigationmenu > div > div > ul > li {
+    list-style: none;
+    color: #000;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.sandwichbar ,.navigationmenu > div > div > ul > li:hover{
+    color: rgb(122, 84, 12);
+}
+
+.sandwichbar .navigationmenu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition:  color 0.4s ease;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 0.1vw;
+}
+
+.bigger-font {
+    font-family: 'Oswald', cursive;
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: normal;
+    background: linear-gradient(#000, #aaa) left no-repeat, rgb(0, 0, 0);
+    background-size: 0% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+}
+
+.bigger-font:hover {
+    background-size: 100% 100%;
+}
+
+
+@media all and (max-width:768px){
+    .sandwichbar .toggler:checked ~.navigationmenu > div{
+        transform: translate(0%);
+        transition-duration: var( --menu-speed);
+    }
+    .sandwichbar .navigationmenu > div{
+        width: 160vw;
+        height: 160vh;
+        border-radius: 70%;
+    }
+}
