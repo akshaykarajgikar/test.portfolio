@@ -220,9 +220,7 @@ input[type=text], input[type=email], .button, .textarea{
 
 @media screen and (max-width: 768px) {
     .flex{
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
+        flex-wrap: wrap;
     }
     #hide-on-mobile-1{
         display: none;
