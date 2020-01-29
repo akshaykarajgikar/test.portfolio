@@ -39,6 +39,10 @@ b{
     font-family: var(--font1);
 }
 
+.__font2{
+    font-family: var(--font2);
+}
+
 .inline-block{
     display: inline-block;
 }
